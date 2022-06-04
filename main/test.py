@@ -75,9 +75,10 @@ for i in range(len(path)):
     else:
         outputs = fake_B
 
-    filename = os.path.basename(path[i])
-    img_name = result_folder+'/' + filename
+    img_name = os.path.basename(path[i])
     # scipy.misc.toimage(outputs * 255, high=255, low=0, cmin=0, cmax=255).save(img_name)
     outputs = np.minimum(outputs, 1.0)
     outputs = np.maximum(outputs, 0.0)
     utls.imwrite(img_name, outputs)
+
+   
