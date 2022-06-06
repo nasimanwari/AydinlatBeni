@@ -12,7 +12,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--input", "-i", type=str, default='../input', help='test image folder')
 parser.add_argument("--result", "-r", type=str, default='../result', help='result folder')
-parser.add_argument("--model", "-m", type=str, default='Syn_img_lowlight_withnoise', help='model name')
+parser.add_argument("--model", "-m", type=str, default='Syn_img_lowlight.h5', help='model name')
 parser.add_argument("--com", "-c", type=int, default=1, help='output with/without origional image and mid result')
 parser.add_argument("--highpercent", "-hp", type=int, default=95, help='should be in [85,100], linear amplification')
 parser.add_argument("--lowpercent", "-lp", type=int, default=5, help='should be in [0,15], rescale the range [p%,1] to [0, 1]')

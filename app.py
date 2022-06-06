@@ -9,7 +9,7 @@ import keras
 from flask import Flask, request
 from werkzeug.utils import secure_filename
 
-model_name = 'Syn_img_lowlight_withnoise'
+model_name = 'Syn_img_lowlight'
 mbllen = Network.build_mbllen((None, None, 3))
 mbllen.load_weights('./models/'+model_name+'.h5')
 opt = keras.optimizers.Adam(lr=2 * 1e-04, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
